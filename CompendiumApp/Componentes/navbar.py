@@ -6,14 +6,13 @@ def isologo_box(logo: str) -> rx.Component:
         rx.hstack(
             rx.image(
                 src=logo,
-                width="65px",
+                width="35px",
                 height="auto",
                 border_radius="100px 100px",
                 border="5px solid #555",
             ),
             rx.text("COMPENDIUM"),
-            align="center",
-            justify="center" 
+            align="center"
         ),
         border_width="thick",
         padding="10px"
@@ -49,7 +48,7 @@ def navbar() -> rx.Component:
         border_width="thick",
         padding="10px",
         width="100%",
-        #position="fixed",
-        #top="0px",
-        #z_index="5"
+        position="fixed",
+        top="0px",
+        z_index="5"
     )

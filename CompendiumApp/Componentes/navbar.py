@@ -6,7 +6,7 @@ def isologo_box(logo: str) -> rx.Component:
         rx.hstack(
             rx.image(
                 src=logo,
-                width="75px",
+                width="65px",
                 height="auto",
                 border_radius="100px 100px",
                 border="5px solid #555",
@@ -39,7 +39,7 @@ def botones_box() -> rx.Component:
     )
 
 def navbar() -> rx.Component:
-    return rx.container(
+    return rx.box(
         rx.hstack(
             isologo_box(GlobalState.logo),
             botones_box(),
@@ -47,5 +47,9 @@ def navbar() -> rx.Component:
             justify="between"
         ),
         border_width="thick",
-        padding="10px"
+        padding="10px",
+        width="100%",
+        #position="fixed",
+        #top="0px",
+        #z_index="5"
     )
